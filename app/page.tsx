@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import getRepos from "./lib/getData";
 
 export default async function Home() {
