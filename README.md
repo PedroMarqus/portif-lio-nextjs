@@ -82,13 +82,11 @@ http://localhost:3000
 
 To enable GitHub repository fetching:
 
-1. Create a GitHub Personal Access Token (optional but recommended for higher rate limits)
-2. Create a `.env.local` file in the root of the project
-3. Add the following:
+1. Create a `.env.local` file in the root of the project
+2. Add the following:
 
 ```env
-GITHUB_USERNAME=your_username
-GITHUB_TOKEN=your_token
+GITAME=your_username
 ```
 
 ---
