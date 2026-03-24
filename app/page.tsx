@@ -1,18 +1,27 @@
 
 import Header from "@/components/header";
-import getRepos from "./lib/getData";
+import getRepos from "@/lib/getData";
 import Hero from "@/components/hero";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Footer from "@/components/footer";
+import Skills from "@/components/skills";
+import Contact from "@/components/contact";
 
 export default async function Home() {
   const apiData = await getRepos();
   console.log("Data from API:", apiData)
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-col flex-1 items-center justify-center  font-sans">
       <Header nome="Pedro Marques" />
-      <main className="flex flex-1 w-full  flex-col items-center justify-between  px-8 bg-white dark:bg-black sm:items-start">
-        <h1 className="text-3xl font-bold">Texto da api: {apiData.data?.status === 200 ? apiData.data?.login : apiData.data?.status === 601 ? "User not found" : "Error on github api"}</h1>
-        <Hero />
+      <main className="flex flex-1 h-full w-full  flex-col   px-16  " style={{ backgroundColor: ' #23222B '}}>
+        <Hero url={apiData.data.found ? apiData.data.avatar : ""} /> {/* if you will not conect github profile put the url to your image. Name and function will not get from the github, you must to config they by coding*/ }
+        <About />
+        <Projects repos={apiData.data.found ? apiData.data.repos : []}/>
+        <Skills/>
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
