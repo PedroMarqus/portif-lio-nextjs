@@ -29,7 +29,7 @@ This project is built using:
 
 - **Next.js**
 - **React**
-- **TypeScript** *(optional — adjust if needed)*
+- **TypeScript**
 - **Tailwind CSS**
 - **ShadCN UI**
 - **GitHub REST API**
@@ -82,11 +82,12 @@ http://localhost:3000
 
 To enable GitHub repository fetching:
 
-1. Create a `.env.local` file in the root of the project
+1. Create a `.env` file in the root of the project
 2. Add the following:
 
 ```env
 GITAME=your_username
+ROLE='your role'
 ```
 
 ---
@@ -94,10 +95,11 @@ GITAME=your_username
 ## 📁 Project Structure
 
 ```
+/app            → Application routes (App Router)
 /components     → Reusable UI components  
-/pages          → Application routes  
-/styles         → Global styles  
-/lib            → API and utility functions  
+/lib            → Utility and helper functions  
+/hooks          → Custom React hooks  
+/types          → TypeScript types and interfaces  
 /public         → Static assets  
 ```
 
