@@ -4,7 +4,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon} from "@radix-ui/react-icons"
 import Link from "next/link";
 import { InstagramLogoIcon } from "@phosphor-icons/react";
 
-export default function Hero({url} : {url:string}) {
+export default function Hero({url, name, role} : {url:string, name?: string, role?: string}) {
     return (
         <div className="md:h-[700px] flex flex-col  w-full items-center justify-center">
             <div className="flex flex-row w-full gap-20">
@@ -18,7 +18,7 @@ export default function Hero({url} : {url:string}) {
                     />
                 </div>
                 <div className="flex flex-col p-0">
-                    <h1 className="text-7xl font-bold  mt-4 text-left">Pedro Marques - FullStack Developer</h1>
+                    <h1 className="text-7xl font-bold  mt-4 text-left">{name} - {role}</h1>
                     <p className="text-lg text-left  mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, inventore officiis. Dolor nemo voluptatum ut harum suscipit totam rerum quam magnam fuga, ipsa sunt cum beatae numquam id iusto. Soluta! lorem kakakak </p>
                     <div className="mt-10 flex flex-row gap-6">
                         <Link href={"https://github.com/pedro-marques"} target="_blank" className="flex items-center gap-2 text-lg font-medium hover:text-gray-600" >

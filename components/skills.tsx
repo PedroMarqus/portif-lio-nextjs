@@ -3,40 +3,10 @@
 import Title1 from "./parts/title1";
 import { Card } from "./ui/card";
 import Image from "next/image";
+import skills from "@/lib/mockSkills";
 
 export default function Skills() {
-    const skills = [
-        {
-            id: 1,
-            name: "React",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-        },
-        {
-            id: 2,  
-            name: "JavaScript",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-        },
-        {
-            id: 3,
-            name: "React",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-        },
-        {
-            id: 4,  
-            name: "JavaScript",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-        },
-        {
-            id: 5,
-            name: "React",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
-        },
-        {
-            id: 6,  
-            name: "JavaScript",
-            logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-        },
-    ]
+    
     return(
         <div className="mt-[100px] mb-20">
             <Title1 title="Skills" />
@@ -44,7 +14,7 @@ export default function Skills() {
                 {skills.map((skill) => (
                    <Card className="rounded-sm shadow-2xl h-28    flex items-center justify-center flex-row gap-2" key={skill.id} style={{background: '#2F2E3A'}}>
                         <Image 
-                            src={skill.logo}
+                            src={skill.image}
                             alt={skill.name}
                             width={60}
                             height={60}
