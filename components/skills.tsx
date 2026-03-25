@@ -8,7 +8,7 @@ import skills from "@/lib/mockSkills";
 export default function Skills() {
     
     return(
-        <div className="mt-[100px] mb-20">
+        <div className="mt-[100px] mb-20" id="skills">
             <Title1 title="Skills" />
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
                 {skills.map((skill) => (
@@ -20,7 +20,7 @@ export default function Skills() {
                             height={60}
                             className=""
                         />
-                        <h2 className="text-2xl text-center font-bold ">{skill.name}</h2>
+                        <h2 className="text-2xl text-center text-gray-300 font-bold ">{skill.name}</h2>
                     </Card>
                 ))}
             </div>

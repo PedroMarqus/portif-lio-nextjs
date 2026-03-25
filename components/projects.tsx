@@ -4,7 +4,7 @@ import ProjectCard from "./parts/projectCard";
 
 export default function Projects({repos}: {repos: GitHubRepository[] | null}) {
     return(
-        <div className="mt-[100px]">
+        <div className="mt-[100px]" id="projects">
             <Title1 title="Projects" />
             <div className="mt-4 gap-4 grid grid-cols-1 md:grid-cols-2 ">
                 {

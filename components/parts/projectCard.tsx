@@ -14,7 +14,7 @@ export default function ProjectCard({repo}: {repo: GitHubRepository}) {
       return count.toString();
     };
     return (
-        <Card className="rounded-sm" style={{background: '#2F2E3A'}} >
+        <Card className="rounded-sm " style={{background: '#2F2E3A'}} >
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           {/* Avatar do Proprietário */}
           <Avatar className="h-10 w-10 border border-stone-700">
@@ -23,7 +23,7 @@ export default function ProjectCard({repo}: {repo: GitHubRepository}) {
           </Avatar>
           
           <div className="flex-1">
-            <CardTitle className="text-xl font-semibold tracking-tight text-white">{repo.name}</CardTitle>
+            <CardTitle className="text-xl font-semibold tracking-tight text-gray-200">{repo.name}</CardTitle>
             <CardDescription className="text-sm text-stone-400">
               <a href={repo.owner.html_url} target="_blank" rel="noopener noreferrer" className="hover:underline">
                 {repo.owner.login}
@@ -38,7 +38,7 @@ export default function ProjectCard({repo}: {repo: GitHubRepository}) {
         </CardHeader>
 
         <CardContent className="pb-4">
-          <p className="text-sm text-stone-300 leading-relaxed min-h-[40px]">
+          <p className="text-sm text-gray-400 leading-relaxed min-h-[40px]">
             {repo.description ?? "No description provided."}
           </p>
         </CardContent>
@@ -68,7 +68,7 @@ export default function ProjectCard({repo}: {repo: GitHubRepository}) {
 
           {/* Botão de Ação */}
           <a href={repo.homepage ?? repo.html_url} target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="sm" className="bg-transparent border-stone-700 hover:bg-stone-800 text-white gap-2">
+            <Button variant="outline" size="sm" className="bg-transparent border-stone-700 hover:bg-stone-800 text-gray-200 gap-2">
               View Project
               <ExternalLink className="h-4 w-4" />
             </Button>
